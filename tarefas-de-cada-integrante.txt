@@ -1,0 +1,426 @@
+FRONTEND = Luan e João
+BACKEND = Josué
+INSERÇÃO DE DADOS = Luis
+TESTE DE QUALIDADE E SUPERVISÃO DE DESIGN = Evelyn
+
+
+======================================================================
+PROJETO - E-COMMERCE DE AUTOPEÇAS (CARROS E MOTOS)
+======================================================================
+
+OBJETIVO
+
+Desenvolver uma plataforma web para venda de autopeças utilizando apenas:
+
+- HTML
+- CSS
+- JavaScript
+- Python (FastAPI)
+- SQLite
+
+O sistema permitirá que o usuário:
+
+• visualizar produtos em promoção;
+• navegar por categorias;
+• pesquisar produtos pelo nome;
+• pesquisar utilizando filtros;
+• visualizar detalhes dos produtos.
+
+======================================================================
+COMO O SISTEMA FUNCIONA
+======================================================================
+
+                USUÁRIO
+                    │
+                    ▼
+        HTML + CSS + JavaScript
+                    │
+            Requisições HTTP
+                    │
+                    ▼
+            Backend (Python)
+                    │
+                    ▼
+             Banco de Dados
+                 SQLite
+
+IMPORTANTE
+
+O Frontend NÃO acessa o banco de dados.
+
+Todo acesso ao banco será feito SOMENTE pelo Backend.
+
+======================================================================
+DIVISÃO DA EQUIPE
+======================================================================
+
+MEMBRO 1 - LUAN
+Frontend - Layout
+
+Responsável por:
+
+- Página inicial
+- Cabeçalho
+- Rodapé
+- Menu
+- Responsividade
+- Visual geral
+
+Arquivos:
+
+templates/
+    home.html
+
+static/css/
+    style.css
+
+static/js/
+
+------------------------------------------------------------
+
+MEMBRO 2 - JOÃO
+Frontend - Produtos
+
+Responsável por:
+
+- Página de produtos
+- Página de categorias
+- Página de pesquisa
+- Página de filtros
+- Integração JavaScript com Backend
+
+Arquivos:
+
+templates/
+    produto.html
+    categoria.html
+    resultados.html
+
+static/js/
+    produto.js
+    busca.js
+
+------------------------------------------------------------
+
+MEMBRO 3 - JOSUÉ
+Backend (Python)
+
+Responsável por:
+
+- FastAPI
+- Banco de Dados
+- Rotas
+- APIs
+- Pesquisa
+- Filtros
+- Categorias
+
+Arquivos:
+
+app/
+    main.py
+    database.py
+    models.py
+    crud.py
+
+routers/
+    produtos.py
+    categorias.py
+    busca.py
+
+------------------------------------------------------------
+
+MEMBRO 4 - LUIS
+Banco de Dados e Cadastro
+
+Responsável por:
+
+- Pesquisar produtos
+- Organizar categorias
+- Criar descrições
+- Escolher imagens
+- Cadastrar produtos no banco
+
+Esse integrante NÃO precisa programar.
+
+Ele ficará responsável pela organização das informações.
+
+======================================================================
+ESTRUTURA DAS PASTAS
+======================================================================
+
+projeto/
+
+│
+
+├── app/
+│
+│   ├── main.py
+│   ├── database.py
+│   ├── models.py
+│   ├── crud.py
+│   └── routers/
+│       ├── produtos.py
+│       ├── categorias.py
+│       └── busca.py
+│
+├── templates/
+│   ├── home.html
+│   ├── produto.html
+│   ├── categoria.html
+│   ├── resultados.html
+│   └── base.html
+│
+├── static/
+│   ├── css/
+│   ├── js/
+│   └── imagens/
+│
+├── database/
+│   └── autopecas.db
+│
+└── README.txt
+
+======================================================================
+FUNCIONALIDADES DO SITE
+======================================================================
+
+HOME
+
+- Banner principal
+- Produtos em promoção
+- Categorias
+- Produtos em destaque
+
+------------------------------------------------------------
+
+PESQUISA
+
+O usuário poderá:
+
+- pesquisar pelo nome da peça
+
+Exemplo:
+
+"pastilha de freio"
+
+------------------------------------------------------------
+
+CATEGORIAS
+
+Exemplo:
+
+Motor
+
+Suspensão
+
+Freios
+
+Escapamento
+
+Pneus
+
+Elétrica
+
+Óleo
+
+Acessórios
+
+------------------------------------------------------------
+
+FILTROS
+
+Marca do veículo
+
+Modelo
+
+Ano
+
+Faixa de preço
+
+Categoria
+
+======================================================================
+BANCO DE DADOS
+======================================================================
+
+Tabela Categorias
+
+id
+
+nome
+
+------------------------------------------------------------
+
+Tabela Produtos
+
+id
+
+nome
+
+descricao
+
+preco
+
+categoria_id
+
+marca
+
+modelo
+
+ano_inicio
+
+ano_final
+
+imagem
+
+promocao
+
+======================================================================
+ROTAS DO BACKEND
+======================================================================
+
+Página Inicial
+
+/
+
+------------------------------------------------------------
+
+Produtos
+
+/produtos
+
+------------------------------------------------------------
+
+Produto
+
+/produtos/{id}
+
+------------------------------------------------------------
+
+Categorias
+
+/categorias
+
+------------------------------------------------------------
+
+Pesquisa
+
+/busca
+
+------------------------------------------------------------
+
+Filtros
+
+/filtro
+
+======================================================================
+PADRÃO DE VISUAL
+======================================================================
+
+Antes de criar qualquer página devemos seguir o mesmo padrão.
+
+Todos devem utilizar:
+
+- mesmas cores
+- mesma fonte
+- mesmo estilo dos botões
+- mesmo estilo dos cards
+- mesmo tamanho dos títulos
+
+Isso evita que cada página fique diferente.
+
+======================================================================
+COMO TRABALHAR NO GITHUB
+======================================================================
+
+NUNCA alterar diretamente a branch main.
+
+Cada integrante trabalhará em sua própria branch.
+
+Exemplo:
+
+feature-home => Luan
+
+feature-produtos => João
+
+feature-backend => Josué
+
+feature-database => Luis
+
+Quando terminar uma funcionalidade, solicitar a integração (merge).
+
+======================================================================
+CRONOGRAMA
+======================================================================
+
+Etapa 1
+
+Definir:
+
+- layout
+- banco
+- categorias
+- funcionalidades
+
+------------------------------------------------------------
+
+Etapa 2
+
+Frontend cria todas as páginas.
+
+Backend cria todas as rotas.
+
+Banco organiza os produtos.
+
+------------------------------------------------------------
+
+Etapa 3
+
+Integração entre Frontend e Backend.
+
+------------------------------------------------------------
+
+Etapa 4
+
+Testes.
+
+Correção de erros.
+
+Responsividade.
+
+======================================================================
+OBJETIVO FINAL
+======================================================================
+
+O usuário deverá conseguir:
+
+✔ acessar a página inicial;
+
+✔ visualizar produtos;
+
+✔ navegar pelas categorias;
+
+✔ pesquisar produtos;
+
+✔ utilizar filtros;
+
+✔ visualizar detalhes do produto.
+
+======================================================================
+REGRAS DO PROJETO
+======================================================================
+
+1. Não alterar arquivos de outro integrante sem avisar.
+
+2. Sempre manter o código organizado.
+
+3. Utilizar nomes claros para arquivos e funções.
+
+4. Comentar trechos importantes do código.
+
+5. Antes de enviar alterações para o GitHub, testar se tudo continua funcionando.
+
+6. Manter comunicação constante entre todos os integrantes.
+
+7. O objetivo principal é entregar um sistema funcional, organizado e visualmente agradável dentro do prazo.
